@@ -2,7 +2,10 @@ import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
   output: 'export', // for github pages
-  basePath: '/playground-of-the-lost-souls',
+  basePath:
+    process.env.NODE_ENV === 'production'
+      ? '/playground-of-the-lost-souls'
+      : '',
   images: {
     unoptimized: true, // since github pages doesn't support image optimization
   },

@@ -1,6 +1,7 @@
 import Image from 'next/image';
 
-const basePath = '/playground-of-the-lost-souls';
+const basePath =
+  process.env.NODE_ENV === 'production' ? '/playground-of-the-lost-souls' : '';
 
 export default function Home() {
   return (
