@@ -1,14 +1,16 @@
 'use client';
 
-import { useState } from 'react';
+import { useTheme } from 'next-themes';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 
 export function ThemeSwitcherButton() {
-  const [isDark, setIsDark] = useState(false);
+  const { resolvedTheme, setTheme } = useTheme();
+
+  const isDark = resolvedTheme === 'dark';
 
   const handleClick = () => {
-    setIsDark(!isDark);
+    setTheme(isDark ? 'light' : 'dark');
   };
 
   return (
