@@ -7,7 +7,7 @@ import Image from 'next/image';
 import { basePath } from './constants';
 
 export function Header({ className }: { className?: string }) {
-  const navLinks = ['Works', 'News', 'Recommendations'];
+  const navLinks = ['Portfolio', 'News', 'Recommendations'];
 
   return (
     <header className={cn('bg-background/70 backdrop-blur-md', className)}>
@@ -32,7 +32,7 @@ export function Header({ className }: { className?: string }) {
             {navLinks.map((link) => (
               <a
                 key={link}
-                href="#"
+                href={`/${link.toLowerCase()}`}
                 className="text-foreground hover:text-muted-foreground text-md font-regular transition-colors"
               >
                 {link}

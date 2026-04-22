@@ -4,6 +4,7 @@ import Image from 'next/image';
 import { Lora } from 'next/font/google';
 import { basePath } from '@/components/global/constants';
 import { Greeting } from '@/components/landing/greetings';
+import { AboutMe } from '@/components/landing/about';
 
 const lora = Lora({
   subsets: ['latin'],
@@ -16,7 +17,7 @@ export default function Landing() {
   return (
     <div className="bg-background w-full">
       {/* Quote Section */}
-      <div className="items-top mx-auto flex w-full max-w-4xl justify-center px-4 pt-16 sm:px-8">
+      <div className="items-top mx-auto flex w-full max-w-4xl justify-center px-4 py-8 sm:px-8">
         <div className="flex w-full flex-col items-center gap-8">
           {/* Image Section */}
           <div className="flex w-full flex-shrink-0 items-center justify-center">
@@ -31,7 +32,7 @@ export default function Landing() {
           </div>
 
           {/* Quote Section */}
-          <div className="bg-foreground/10 flex w-full flex-col items-center justify-center rounded-lg p-4 dark:bg-white/10">
+          <div className="bg-foreground/10 flex w-full flex-col items-center justify-center rounded-lg p-4">
             <blockquote className={`${lora.className} w-full space-y-2`}>
               <p className="w-full text-center text-xl text-zinc-900 italic sm:text-xl dark:text-zinc-100">
                 One day you&apos;ll leave this world behind. So live a life you
@@ -46,9 +47,16 @@ export default function Landing() {
       </div>
 
       {/* Greeting Section */}
-      <div className="mx-auto flex w-full max-w-4xl items-start justify-start py-16 sm:px-8">
+      <div className="mx-auto flex w-full max-w-4xl items-start justify-start py-8 sm:px-8">
         <div className="w-full">
           <Greeting />
+        </div>
+      </div>
+
+      {/* About Me Section */}
+      <div className="mx-auto flex w-full max-w-4xl items-start justify-start py-8 sm:px-8">
+        <div className="w-full">
+          <AboutMe />
         </div>
       </div>
     </div>
