@@ -1,6 +1,7 @@
 'use client';
 
-import { CustomButton } from '../ui/custom-button';
+import { CustomButton } from '@/components/ui/custom-button';
+import { basePath } from '@/components/global/constants';
 
 export const AboutMe = () => {
   return (
@@ -26,13 +27,13 @@ export const AboutMe = () => {
 
       {/* Portfolio and Resume Buttons */}
       <div className="flex w-full flex-wrap justify-center gap-4">
-        <a href="/portfolio">
+        <a href={`${basePath}/portfolio`}>
           <CustomButton>
             My Portfolio
             <span className="nf nf-fa-chevron_right" />
           </CustomButton>
         </a>
-        <a href="/resume">
+        <a href={`${basePath}/resume`}>
           <CustomButton>
             My Resume
             <span className="nf nf-fa-chevron_right" />
