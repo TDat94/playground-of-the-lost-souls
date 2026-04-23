@@ -13,7 +13,7 @@ const lora = Lora({
   display: 'swap',
 });
 
-export default function Landing() {
+export default function LandingPage() {
   return (
     <div className="bg-background w-full">
       {/* Quote Section */}

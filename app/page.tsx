@@ -1,3 +1,3 @@
-import Landing from '@/features/landing/page';
+import LandingPage from '@/features/landing/page';
 
-export default Landing;
+export default LandingPage;

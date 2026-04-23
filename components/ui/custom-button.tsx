@@ -22,7 +22,7 @@ export const CustomButton = React.forwardRef<
       <Button
         ref={ref}
         className={cn(
-          'group/button inline-flex shrink-0 items-center justify-center gap-2 rounded-md border border-transparent bg-[var(--deep-indigo)] px-2.5 py-2.5 text-sm font-medium whitespace-nowrap text-white transition-all outline-none select-none hover:bg-[var(--deep-indigo)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*="size-"])]:size-4',
+          'group/button text-md font-regular inline-flex shrink-0 items-center justify-center gap-2 rounded-md border border-transparent bg-[var(--deep-indigo)] px-4 py-5 whitespace-nowrap text-white transition-all outline-none select-none hover:bg-[var(--deep-indigo)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*="size-"])]:size-4',
           className,
         )}
         {...props}
