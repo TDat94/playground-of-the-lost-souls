@@ -5,6 +5,7 @@ import { Lora } from 'next/font/google';
 import { basePath } from '@/components/global/constants';
 import { Greeting } from '@/components/landing/greetings';
 import { AboutMe } from '@/components/landing/about';
+import { Interests } from '@/components/landing/interests';
 
 const lora = Lora({
   subsets: ['latin'],
@@ -57,6 +58,13 @@ export default function LandingPage() {
       <div className="mx-auto flex w-full max-w-4xl items-start justify-start py-8 sm:px-8">
         <div className="w-full">
           <AboutMe />
+        </div>
+      </div>
+
+      {/* Interests Section */}
+      <div className="mx-auto flex w-full max-w-4xl items-start justify-start py-8 sm:px-8">
+        <div className="w-full">
+          <Interests />
         </div>
       </div>
     </div>
